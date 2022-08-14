@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button plus = findViewById(R.id.plus);
         Button minus = findViewById(R.id.minus);
+        Button times = findViewById(R.id.times);
 
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 decrement();
+            }
+        });
+
+        times.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                times();
             }
         });
     }
@@ -50,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
         counter--;
         String s = counter + "";
         count.setText(s);
+    }
+
+    private void times()
+    {
+
     }
 }
